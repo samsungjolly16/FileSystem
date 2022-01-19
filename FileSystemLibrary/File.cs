@@ -24,7 +24,7 @@ namespace FileSystemLibrary
         }
         public override string Stampa()
         {
-            return  base.Stampa() + Estensione + " " + "(" + Dimensione + "KB)";
+            return $"------|--"+base.Stampa() + Estensione + " " + "(" + Dimensione + "KB)";
             
 
         }

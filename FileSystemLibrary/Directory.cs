@@ -8,11 +8,15 @@ namespace FileSystemLibrary
 {
     public class Directory : Elemento
     {
-         public  List<Elemento> Elementi { get; } = new List<Elemento>();
+        public  List<Elemento> Elementi { get; } = new List<Elemento>();
         public string Nome { get; private set; }
         public  Directory(string nome):base(nome)
         {
             Nome = nome;
+        }
+        public void AddElementi(Elemento el)
+        {
+            Elementi.Add(el);
         }
         public override long GetDimensione()
         {
@@ -25,7 +29,7 @@ namespace FileSystemLibrary
         }
         public override string Stampa()
         {
-            return "|--/"+base.Stampa();
+            return $"\n---|--/{Nome}";
         }
 
     }

@@ -14,19 +14,13 @@ namespace FileSystemLibrary
             Nome = nome;
         }
 
-        public string  Stampa(string n1)
+        public void  Stampa(string n1)
         {
             string s="";
             Directory dp = new Directory(n1);
-            foreach(Directory d in dp.Elementi)
-            {
-                s += $"\n---|--/{d.Nome}";
-                foreach(File f in dp.Elementi)
-                {
-                    s += $"\n------|--{f.Stampa()}";
-                }
-            }
-            return "/" + Nome + "\n" + dp.Stampa()+s;
+            s+= "/" + Nome + "\n" + "|--/" + dp.Nome;
+            Console.Write(s);
+            
         }
     }
 }
