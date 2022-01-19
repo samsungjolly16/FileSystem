@@ -15,7 +15,6 @@ namespace FileSystemLibrary
             Dimensione = dimensione;
             Estensione = estensione;
             this.nome = nome;
-
         }
         public long Dimensione { get; private set; }
         public override long GetDimensione()
